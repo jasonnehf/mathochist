@@ -1,0 +1,69 @@
+
+	"Children's" Adding Game
+
+	Create a game which could be used by young children to learn to 
+		add.  
+	
+	The player is given the numbers 1 - 9, and a random number of 
+		'stars' to count (or any other shape).  
+	
+	They must select one or more numbers to add up to the number of 
+		stars.  
+	
+	If they are right, they get to try again with a new number of 
+		stars, but the numbers they used can't be used again.  
+	
+	If they use all the numbers, they win!
+
+	MVP:
+/	Nine number buttons, for each of the numbers 1 - 9.  
+		While these are active, they can be clicked to toggle selection.  
+		If the round ends, the selected numbers will be disabled.
+
+/	A "star" area.  
+	This will have a random number of stars, between one and nine.  
+	The number of stars is what the player is trying to add up to. 
+		(if you want, you can adjust the range of stars or numbers to 
+			make it easier/harder)
+
+	A submit button.  
+		This will check to see if the selected numbers add up to the 
+			number of stars.  
+		If they're correct, 
+			the round ends, 
+			those numbers are disabled, 
+			a new random number of stars are presented.  
+		If they're wrong, you may inform the player.
+
+	A "scramble/reroll" button.  
+		This will give them a limited number of chances to randomize the 
+			number of stars so they can keep trying.  
+		Perhaps you only allow them to use this 3 times.
+
+	A restart button.  
+		This will allow the player to start over.  
+		This should reset the game to the initial conditions, and also 
+			randomize the stars again.
+
+	Win detection.  
+		If they submit properly to end the round, 
+		and there are no numbers left, 
+		they win!  
+		The app should congratulate them!
+
+	The ranges of numbers and stars, or the number of retries, 
+	can be adjusted to make the game easier or harder as you wish.
+
+	Extra Features:
+	Add animations.  (This is pretty easy!  
+		Bring in animate.css from a cdn 
+			(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css), 
+			and add the 'animated' class, along with one of the animation 
+			classes.  Check out the GitHub page for more information.)
+
+	Implement lose detection.  
+		This means, your app will be able to 'know' when the player has
+			no way to add up to the number of stars.  
+		This can be done to encourage the player to hit the 'scramble' 
+			button, or if they have no scrambles left, to tell them they 
+			have lost and must retry.

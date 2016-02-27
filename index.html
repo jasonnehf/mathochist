@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">			
+	<title>Mathochist!</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+	
+	<!-- We all start using OPP (Other People's Plugins) someday... welp, today's my day... -->
+	<link rel="stylesheet" href="grid.css">   
+	
+	
+	<link rel="stylesheet" href="style.css">
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="bg-container">
+	<div class="grid">
+		<div class="header grid__col grid__col--1-of-2">
+			<div class="logo">mathoc<span id="letter-h">h</span>ist</div>
+			<div class="grid__col grid__col--1-of-2 description grid__col--push-1-of-12">
+				<div>An adding game, for when you hate yourself.</div>
+				<div>Use your deck to match the number of stars.<br/>You can only use each deck item once!</div>
+			</div>
+		</div>
+		<div class="container star-container grid__col grid__col--1-of-3 grid__col--centered" id='star-container'>
+			<!-- <div class='star'></div>
+			<div class='star'></div>
+			<div class='star'></div>
+			<div class='star'></div>
+			<div class='star'></div>
+			<div class='star'></div>
+			<div class='star'></div>
+			<div class='star'></div>
+			<div class='star'></div> -->
+		</div>
+		<div class="controls-container grid grid__col grid__col--1-of-3 grid__col--centered"  id='controls-container'>
+			<div class="grid__col grid__col--1-of-1">
+			<button class="gamebutton" id="button-submit">Submit</button>
+			<button class="gamebutton" id="button-reset">Reset Game</button>
+			<div id="message"></div>
+			<button class="gamebutton" id="button-reroll">Re-roll</button>
+
+			</div>
+			
+		</div>
+		<div id='deck-container' class="container card-container grid__col grid__col--1-of-3 grid__col--centered">
+			<div class="labeltext">Deck:</div>
+			<span class="card" id="card1" data-value="1">1</span>
+			<span class="card" id="card2" data-value="2">2</span>
+			<span class="card" id="card3" data-value="3">3</span>
+			<span class="card" id="card4" data-value="4">4</span>
+			<span class="card" id="card5" data-value="5">5</span>
+			<span class="card" id="card6" data-value="6">6</span>
+			<span class="card" id="card7" data-value="7">7</span>
+			<span class="card" id="card8" data-value="8">8</span>
+			<span class="card" id="card9" data-value="9">9</span>
+		</div>
+			<div class="footer grid__col grid__col--1-of-3"></div>
+	</div>
+	</div>
+</body>
+</html>

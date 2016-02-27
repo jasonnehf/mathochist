@@ -1,0 +1,17 @@
+adding game
+	player gets chips 1 of each 1-9
+	player dealt card w/ random num of stars
+	player must select chips that add up to num of stars
+
+
+extra feature:
+	lose detection
+	animation
+	ways to earn number-chips back
+
+
+
+
+
+give selected chips 'selected' class when selected via event handler
+when submitting answer, remove selected items from listener list by using $(.selected).off('click'); <-- removes event handler
