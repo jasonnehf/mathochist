@@ -30,7 +30,7 @@ function init(event) {
 	$submitbtn.on('click',submitClicked);
 	$rerollbtn.on('click',rerollClicked);
 
-	// $(document).on('keydown',cheatcode);
+	$(document).on('keydown',cheatcode);
 
 	$deck.on('click',cardClicked);
 
@@ -61,7 +61,7 @@ function makeNewStars() {
 		// console.log("madenewstar:", $newstar);
 
 	}
-
+	$stars.find(".star").addClass('animated flipInY');
 	$stars.data("value",num);
 }
 
@@ -88,12 +88,17 @@ function submitClicked(event) {
 	{
 		console.log("no");
 		$message.text("Your answer is incorrect. Please try again.");
+		$message.addClass("animated shake");
 		$(".clicked").removeClass("clicked");
 	}
 
-	if($(".clicked").length===0)
+	if($(".disabled").length===9)
 	{
 		$message.text("Holy shit! You won, dude!");
+		$message.addClass("animated tada");
+		$stars.find(".star").addClass('animated flipOutX');
+		$("#thegrid").addClass('animated tada');
+
 	}
 
 }
