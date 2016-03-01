@@ -35,10 +35,6 @@ function init(event) {
 	$deck.on('click',cardClicked);
 
 	resetClicked(event); 	// just intializing/resetting the board
-
-	// $("#entry-button").on('click', addItemToMain);
-	// $(".group-container").on('click', '.list-item, .group', itemClicked);		
-	// $(".group-container").on('dblclick', '.list-item', itemDblClicked);	
 }
 
 function cheatcode(event)
@@ -51,10 +47,6 @@ function makeNewStars() {
 	// console.log("newstars");
 	$stars.empty();
 	var num=Math.floor(Math.random()*5)+6;
-	// while(num!==$stars.data().value)
-	// {
-	// 	
-	// }
 	for(var i=0;i<num;i++) {
 		var $newstar=$('<div>').addClass("star");
 		$stars.append($newstar);
@@ -80,19 +72,19 @@ function submitClicked(event) {
 	if(sumAllClickedData === $stars.data().value)
 	{
 		//you got it!
-		console.log("yes");
+		// console.log("yes");
 		$(".clicked").removeClass("clicked").addClass("disabled");
 		makeNewStars();
 	}
 	else
 	{
-		console.log("no");
+		// console.log("no");
 		$message.text("Your answer is incorrect. Please try again.");
 		$message.addClass("animated shake");
 		$(".clicked").removeClass("clicked");
 	}
 
-	if($(".disabled").length===9)
+	if($(".card.disabled").length===9)
 	{
 		$message.text("Holy shit! You won, dude!");
 		$message.addClass("animated tada");
@@ -120,6 +112,7 @@ function getClickedCardValues() {
 function cardClicked(event) {
 	var $this=$(this);
 	$this.toggleClass("clicked");
+	$message.removeClass("animated").removeClass("tada");
 }
 
 function resetReroll()
